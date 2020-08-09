@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<h:outputStylesheet library="css" name="style.css" />
+
+	<title>SIBD</title>
+</h:head>
+<h:body>
+	<p>Olá, Mundo!</p>
+	<p:commandButton value="enviar" />
+
+	<h3>Responsive (PrimeFlex, Default alignment)</h3>
+	<p:panelGrid columns="4" layout="grid"
+		columnClasses="p-col-1, p-col-2, p-col-1, p-col-2">
+		<p:outputLabel for="textB1" value="Text 1" />
+		<p:inputText id="textB1" />
+
+		<p:outputLabel for="textB2" value="Text 2" />
+		<p:inputText id="textB2" />
+
+		<p:outputLabel for="dateB" value="Date" />
+		<p:datePicker id="dateB" showIcon="true" style="width:auto" />
+
+		<p:outputLabel for="checkboxB" value="Checkbox" />
+		<p:selectBooleanCheckbox id="checkboxB" itemLabel="Checkbox" />
+
+		<p:outputLabel for="text3B" value="Text 3" />
+		<p:inputText id="text3B" />
+
+		<p:outputLabel for="selectOneB" value="SelectOne" />
+		<p:selectOneMenu id="selectOneB">
+			<f:selectItem itemLabel="Select One" itemValue="" />
+			<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+			<f:selectItem itemLabel="PS4" itemValue="PS4" />
+			<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+		</p:selectOneMenu>
+	</p:panelGrid>
+
+	<h:form>    
+    <h3>Basic</h3>
+    <p:inputText />
+ 
+   <h3>Floating Label</h3>
+   <span class="ui-float-label">
+       <p:inputText id="float-input" value="#{basicView.text}" />
+       <p:outputLabel for="@previous" value="Username" />
+   </span>
+ 
+</h:form>
+</h:body>
+</html>
