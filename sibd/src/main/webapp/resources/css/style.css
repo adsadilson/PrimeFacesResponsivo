@@ -1,15 +1,86 @@
 @charset "utf-8";
 
-.venda-icon {
-	background-image: url(../resources/images/cart_add32.png) !important;
-	width: 64px;
-	height: 32px;
-	top: 20px !important;
+/* topo */
+.ad-topo {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	min-height: 55px;
+	z-index: 9999;
+	background-color: #0077b3 ;
+	box-shadow: 0px 2px 2px #ccc;
 }
 
-
-
-.ui-selectonemenu {
-	vertical-align: middle;
+.ad-topo>img {
+	margin-top: 3px;
+	margin-left: 5px;
+	height: 55px;
 }
 
+/* Roda pe */
+footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 25px;
+	background-color: #f6f6f6;
+	border-top: 1px solid #eaeaea;
+	z-index: 9998;
+	
+	font-size: 13px;
+	color: #004040;
+	font-family: sans-serif;
+}
+
+/* Barra lateral */
+.ad-barra-lateral {
+	position: fixed;
+	top: 55px;
+	bottom: 0;
+	left: 0;
+	width: 210px;
+	margin-left: -211px;
+	z-index: 9997;
+	transition: margin-left 0.5s;
+	overflow-y: auto;
+	background-color: #f6f6f6;
+	border-right: 1px solid #eaeaea;
+}
+
+@media ( min-width : 960px) {
+	.ad-barra-lateral {
+		margin-left: 0px;
+	}
+	
+	.ad-barra-lateral.is-toggled {
+		margin-left: -211px;
+	}
+}
+
+/* CONTEUDO */
+.ad-conteudo {
+	margin-top: 65px;
+	transition: margin-left 0.5s;
+	height: 87vh;
+}
+
+@media ( min-width : 960px) {
+	.ad-conteudo {
+		margin-left: 210px;
+	}
+	
+	.ad-conteudo.is-toggled {
+		margin-left: 0;
+	}
+}
+
+/* Toggle */
+.ad-toggle {
+	float: right;
+	line-height: 62px;
+	margin-right: 15px;
+	font-size: 34px;
+	color: #fff;
+}
